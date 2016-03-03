@@ -29,7 +29,7 @@ client.connect(function(err) {
       var ttl = row.title;
       ttl = ttl.replace(/"/g,"");
       ttl = ttl.replace(/\n/g," ");
-      console.log('* "%s":%s [%s]', ttl, row.link, lastm.format("YYYY-MM-DD HH:mm:ss+0900"));
+      console.log('* "%s":%s [%s]', ttl, row.link, lastm.format("YYYY-MM-DD HH:mm:ssZZ"));
     });
     query.on('end', function(result) {
       // console.log(result.rowCount + ' rows were received');

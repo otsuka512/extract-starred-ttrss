@@ -23,6 +23,5 @@ pg.types.setTypeParser(1114, function(stringValue) {
     return stringValue + "+0000";
 });
 ```
-出力がJST固定なので注意。
 
 End.
