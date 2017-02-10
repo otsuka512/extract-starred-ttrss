@@ -6,7 +6,7 @@ var conString = "postgres://" + config.dbConfig.dbUser + ":" + config.dbConfig.d
     + config.dbConfig.host + ":" + config.dbConfig.port + "/" + config.dbConfig.dbName;
 
 var sqlstr = "SELECT ttrss_entries.title,ttrss_entries.link,ttrss_user_entries.last_marked \
-FROM ttrss_user_entries INNER JOIN ttrss_entries ON ttrss_entries.id = ttrss_user_entries.int_id \
+FROM ttrss_user_entries INNER JOIN ttrss_entries ON ttrss_entries.id = ttrss_user_entries.ref_id \
 WHERE ttrss_user_entries.marked = TRUE \
 ORDER BY ttrss_user_entries.last_marked DESC;"
 
